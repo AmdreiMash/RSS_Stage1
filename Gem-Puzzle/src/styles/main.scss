@@ -1,0 +1,144 @@
+body{
+	width: 100vw;
+	overflow-x: hidden;
+}
+.popUp{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(245, 245, 220, 0.57);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-199%);
+	display: flex;
+	justify-content: center;
+	z-index: 999;
+
+	.result{
+		margin: 100px auto;
+		width: 300px;
+		height: auto;
+			background: #4676D7;
+		border-radius: 5%;
+		padding: 19px;
+		
+		p{
+			font-size: 19px;
+
+		}
+	}
+}
+
+.act{
+	transform: translateX(0);
+}
+
+.header{
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+	overflow: hidden;
+	
+	.menu{
+		width: 90%;
+		margin: 30px auto 10px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+
+		.button{
+			width: 220px;
+			appearance: none;
+			border: 0;
+			border-radius: 5px;
+			background: #4676D7;
+			color: #fff;
+			padding: 8px 16px;
+			font-size: 16px;
+			transition: all 0.5s;
+		}
+		.button:hover{
+			scale: 1.05;
+			background: #1e5ad3;
+		}
+		.off{
+			background: #d75e46;
+		}
+		.off:hover{
+			scale: 1.05;
+			background: #d3331e;
+		}
+
+	}
+	.counters{
+		display: flex;
+		justify-content: center;
+		gap: 19px;
+		font-size: 19px;
+		font-weight: 900;
+	}
+}
+.main{
+	width: 100%;
+	margin: 0 auto;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	
+	.area{
+		position: relative;
+		border: #4676D7 3px solid;
+		border-radius: 3%;
+		background-color: antiquewhite;
+		.block{
+			border: #4676D7 1px solid;
+			border-radius: 10%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+			z-index: 3;
+			transition: all 0.3s;
+		}
+		.block:hover{
+			scale: 0.97;
+		}
+		.empty{
+			z-index: 1;
+			border-radius: 10%;
+			background-color: antiquewhite;
+		}
+	}
+}
+
+.footer{
+	margin-top: 10px;
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	justify-content: center;
+	.size{
+			width: 70px;
+			appearance: none;
+			border: 0;
+			border-radius: 5px;
+			background: #4676D7;
+			color: #fff;
+			padding: 8px 16px;
+			font-size: 16px;
+			transition: all 0.5s;
+	}
+	.size:hover{
+		scale: 1.05;
+		background: #1e5ad3;
+	}
+	
+}

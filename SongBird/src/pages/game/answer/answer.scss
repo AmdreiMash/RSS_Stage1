@@ -1,0 +1,55 @@
+p {
+  margin: 0;
+}
+.answers {
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  .answers__button {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border: 1px #fff solid;
+    border-radius: 1%;
+    background-color: #6b6969;
+    flex: 1 1 19%;
+    transition: all 0.5s;
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #424242;
+      border: 1px #333232 solid;
+    }
+  }
+  .wrong {
+    background-color: rgba(247, 27, 27, 0.757);
+    .indicator {
+      background-color: red;
+      border: 1px #a90000 solid;
+    }
+  }
+  .right {
+    background-color: rgb(67, 135, 40);
+    .indicator {
+      background-color: #04f831;
+      border: 1px #03a900 solid;
+    }
+  }
+}
+
+.interactive {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.interactive:hover {
+  scale: 1.05;
+  opacity: 1;
+}

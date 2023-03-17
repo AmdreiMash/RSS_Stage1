@@ -1,0 +1,156 @@
+.audio {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px 0 15px 5px;
+  gap: 15px;
+
+  @media (width < 501px) {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .audio__img {
+    //height: 15vw;
+    height: 155px;
+    width: 199px;
+    //width: 20vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5%;
+    @media (width < 701px) {
+      align-self: flex-start;
+    }
+    @media (width < 501px) {
+      align-self: center;
+    }
+  }
+  .volume {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    .volume__icon {
+      background-image: url("../../../Assets/svg/v1.svg");
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    .volume__bar {
+      //display: none;
+      width: 0px;
+      height: 5px;
+      position: relative;
+      cursor: pointer;
+      transition: width 0.3s ease;
+      opacity: 0;
+    }
+  }
+  .volume:hover {
+    .volume__bar {
+      //display: block;
+      width: 15vw;
+      transition: width 0.3s ease;
+      opacity: 1;
+    }
+  }
+  .audio__player {
+    flex: 4 1 70%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+
+    @media (width < 501px) {
+      .name,
+      .species {
+        align-self: center;
+      }
+    }
+    .name,
+    .species {
+      font-size: 19px;
+    }
+
+    .conrtroll {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      //justify-content: space-;
+      gap: 0 10px;
+
+      .controll__button {
+        height: 40px;
+        width: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.6;
+        flex: 0 0 auto;
+
+        @media (width < 501px) {
+          height: 30px;
+          width: 30px;
+        }
+      }
+      .controll__button:hover {
+        opacity: 1;
+      }
+      .conrtroll__timeBar {
+        width: 85%;
+
+        .conrtroll__time {
+          margin: 0 auto;
+          width: 99%;
+          font-size: 9px;
+          color: rgba(255, 251, 251, 0.474);
+        }
+
+        .conrtroll__bar {
+          width: 100%;
+          height: 5px;
+          position: relative;
+          cursor: pointer;
+        }
+        
+        .conrtroll__time {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+.bird-card {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 5px;
+  transition: scale 0.3s;
+}
+.smal {
+  scale: 0.01;
+}
+.bird-card_description {
+  .audio {
+    .audio__player {
+      .conrtroll {
+        .controll__button {
+          height: 30px;
+          width: 30px;
+        }
+        .conrtroll__bar {
+          width: 100%;
+          height: 3px;
+        }
+      }
+      scale: 1;
+      transition: scale 0.4s;
+    }
+  }
+}
